@@ -3,295 +3,1054 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beltway Haul Co. — Junk Removal & Hauling</title>
-<meta name="description" content="Fast, reliable junk hauling for homes, apartments, and cleanouts in the DMV and Seattle. Text photos for a free estimate.">
+<title>Beltway Haul Co. — Junk Removal &amp; Hauling</title>
+<meta name="description" content="Fast, reliable junk hauling for homes, apartments, and cleanouts across the DMV. Text photos for a free estimate.">
+<meta name="theme-color" content="#0E1826">
+<link rel="canonical" href="https://beltwayhaulco.com/">
+<meta property="og:url" content="https://beltwayhaulco.com/">
+<meta property="og:image" content="https://beltwayhaulco.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://beltwayhaulco.com/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Beltway Haul Co.">
+<meta property="og:title" content="Beltway Haul Co. — Junk Removal &amp; Hauling">
+<meta property="og:description" content="We show up. We haul it. You relax. Same-day junk removal in the DMV — text photos for a free estimate.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beltway Haul Co. — Junk Removal &amp; Hauling">
+<meta name="twitter:description" content="Same-day junk removal in the DMV. Text photos for a free estimate.">
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #0F1B2E;
-    --navy-light: #17263D;
-    --navy-lighter: #1F324D;
-    --orange: #F4791C;
-    --orange-light: #FDBA74;
-    --white: #FFFFFF;
-    --gray: #93A1B6;
-    --border: #2A3A54;
+    --navy:       #0E1826;
+    --navy-soft:  #1B2C45;
+    --orange:     #F4791C;
+    --orange-dk:  #D9600C;
+    --ink:        #14202F;
+    --body:       #3C4757;
+    --muted:      #7A8697;
+    --rule:       #E3E7EC;
+    --paper:      #FFFFFF;
+    --paper-alt:  #F7F8FA;
+
+    --doc-font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --display-font: 'Montserrat', sans-serif;
+    --doc-size: 13pt;
   }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body {
-    background: var(--navy);
-    color: var(--white);
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
+
+  html { scroll-behavior: smooth; }
+
   body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 0 0 48px;
+    background: var(--paper);
+    color: var(--body);
+    font-family: var(--doc-font);
+    font-size: var(--doc-size);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
   }
-  .card {
+
+  ::selection { background: var(--orange); color: #fff; }
+
+  /* ══════════════════════════════ HERO ══════════════════════════════ */
+
+  .hero {
+    position: relative;
+    height: 100svh;
+    min-height: 540px;
     width: 100%;
-    max-width: 440px;
+    overflow: hidden;
     background: var(--navy);
-  }
-  header {
-    padding: 48px 28px 34px;
-    text-align: center;
-    border-bottom: 1px solid var(--border);
-  }
-  .logo-mark {
-    width: 60px;
-    height: 60px;
-    margin: 0 auto 18px;
-    border-radius: 16px;
-    background: var(--orange);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
-    box-shadow: 0 8px 20px rgba(244,121,28,0.35);
+    text-align: center;
   }
-  header h1 {
-    font-size: 1.7rem;
-    font-weight: 800;
-    letter-spacing: -0.01em;
+  .hero video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  /* Legibility scrim — dark at top & bottom, lighter through the middle */
+  .hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background:
+      linear-gradient(180deg, rgba(14,24,38,0.72) 0%, rgba(14,24,38,0.40) 38%, rgba(14,24,38,0.55) 72%, rgba(14,24,38,0.92) 100%),
+      radial-gradient(ellipse 90% 70% at 50% 45%, transparent 30%, rgba(14,24,38,0.45) 100%);
+  }
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    padding: 0 24px;
+    max-width: 860px;
+  }
+  .hero-eyebrow {
+    font-family: var(--doc-font);
+    font-size: 11pt;
+    letter-spacing: 0.34em;
     text-transform: uppercase;
+    color: rgba(255,255,255,0.82);
+    margin-bottom: 26px;
   }
-  header p.tagline {
-    margin-top: 8px;
-    font-size: 0.95rem;
-    color: var(--gray);
-    font-weight: 500;
-    line-height: 1.4;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+  .hero-eyebrow::before,
+  .hero-eyebrow::after {
+    content: "";
+    display: inline-block;
+    width: 34px;
+    height: 1px;
+    background: var(--orange);
+    vertical-align: middle;
+    margin: 0 14px 4px;
   }
-  header p.area {
-    margin-top: 16px;
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
+  .hero h1 {
+    font-family: var(--display-font);
+    font-weight: 400;
+    font-size: clamp(3.1rem, 11.5vw, 8.2rem);
+    line-height: 0.94;
+    letter-spacing: 0.005em;
     text-transform: uppercase;
-    color: var(--orange-light);
-    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 4px 40px rgba(0,0,0,0.45);
   }
-  .badges {
+  .hero h1 .thin {
+    display: block;
+    font-size: 0.44em;
+    letter-spacing: 0.16em;
+    color: var(--orange);
+    margin-top: 0.32em;
+  }
+  .hero-tagline {
+    margin: 30px auto 0;
+    max-width: 560px;
+    font-size: 14pt;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.90);
+  }
+  .hero-cta {
+    margin-top: 38px;
     display: flex;
+    gap: 12px;
     justify-content: center;
-    gap: 8px;
-    margin-top: 20px;
     flex-wrap: wrap;
   }
-  .badge {
-    font-size: 0.68rem;
-    font-weight: 700;
-    letter-spacing: 0.02em;
-    color: var(--white);
-    background: var(--navy-lighter);
-    border: 1px solid var(--border);
-    padding: 6px 10px;
-    border-radius: 20px;
-  }
-  section {
-    padding: 26px 24px;
-    border-bottom: 1px solid var(--border);
-  }
-  .actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .btn {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    padding: 15px 18px;
-    border-radius: 12px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.98rem;
-    border: 1px solid var(--border);
-    background: var(--navy-light);
-    color: var(--white);
-    transition: transform 0.08s ease;
-  }
-  .btn:active { transform: scale(0.98); }
-  .btn .ico {
-    width: 34px;
-    height: 34px;
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    flex-shrink: 0;
-    background: rgba(244,121,28,0.15);
-  }
-  .btn-primary {
-    background: var(--orange);
-    border-color: var(--orange);
-    color: var(--navy);
-    box-shadow: 0 8px 20px rgba(244,121,28,0.3);
-  }
-  .btn-primary .ico { background: rgba(15,27,46,0.15); }
-  .btn .sub {
-    display: block;
-    font-weight: 500;
-    font-size: 0.78rem;
-    color: var(--gray);
-    margin-top: 1px;
-  }
-  .btn-primary .sub { color: rgba(15,27,46,0.65); }
-
-  h2.section-title {
-    font-size: 0.8rem;
-    font-weight: 800;
+  .hero-btn {
+    display: inline-block;
+    padding: 15px 30px;
+    font-family: var(--doc-font);
+    font-size: 13pt;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: var(--orange);
-    margin-bottom: 14px;
+    text-decoration: none;
+    border: 1px solid rgba(255,255,255,0.55);
+    color: #fff;
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(6px);
+    transition: background 0.25s ease, border-color 0.25s ease, transform 0.15s ease;
   }
-  .steps {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .step {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
-  .step .num {
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
+  .hero-btn:hover { background: rgba(255,255,255,0.16); border-color: #fff; }
+  .hero-btn:active { transform: translateY(1px); }
+  .hero-btn.solid {
     background: var(--orange);
-    color: var(--navy);
-    font-size: 0.78rem;
-    font-weight: 800;
+    border-color: var(--orange);
+    color: #fff;
+    box-shadow: 0 10px 30px rgba(244,121,28,0.35);
+  }
+  .hero-btn.solid:hover { background: var(--orange-dk); border-color: var(--orange-dk); }
+
+  .scroll-cue {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 9.5pt;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    text-decoration: none;
+  }
+  .scroll-cue .arrow {
+    display: block;
+    width: 1px;
+    height: 34px;
+    margin: 12px auto 0;
+    background: linear-gradient(180deg, var(--orange), transparent);
+    animation: cue 2.2s ease-in-out infinite;
+  }
+  @keyframes cue {
+    0%, 100% { opacity: 0.35; transform: translateY(0); }
+    50%      { opacity: 1;    transform: translateY(7px); }
+  }
+
+  /* ═══════════════════════════ STICKY BAR ═══════════════════════════ */
+
+  .bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 50;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--rule);
+    padding: 13px 26px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
+    justify-content: space-between;
+    gap: 16px;
+    transform: translateY(-102%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
-  .step p { font-size: 0.92rem; line-height: 1.4; color: var(--gray); }
-  .step p b { display: block; font-size: 0.94rem; margin-bottom: 1px; color: var(--white); }
+  .bar.show { transform: translateY(0); }
+  .bar .mark {
+    font-family: var(--display-font);
+    font-size: 1.02rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--navy);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .bar .mark em { color: var(--orange); font-style: normal; }
+  .bar-links { display: flex; align-items: center; gap: 26px; }
+  .bar-links a {
+    font-size: 11.5pt;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--body);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  .bar-links a:hover { color: var(--orange); }
+  .bar-call {
+    background: var(--navy);
+    color: #fff !important;
+    padding: 9px 20px;
+    letter-spacing: 0.06em;
+    transition: background 0.25s ease;
+  }
+  .bar-call:hover { background: var(--orange); color: #fff !important; }
+  @media (max-width: 700px) { .bar-links .hide-sm { display: none; } }
 
-  .services-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-  .service-chip {
-    background: var(--navy-light);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 10px 12px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--white);
-  }
+  /* ════════════════════════════ SECTIONS ════════════════════════════ */
 
-  footer {
-    padding: 30px 24px 8px;
+  .wrap { max-width: 940px; margin: 0 auto; padding: 0 26px; }
+
+  section.block { padding: 96px 0; }
+  section.block.tint { background: var(--paper-alt); }
+  section.block:not(.tint) + section.block:not(.tint) { border-top: 1px solid var(--rule); }
+
+  /* ── free-estimate strip ── */
+  .strip {
+    background: var(--navy);
+    color: #fff;
+    padding: 54px 26px;
     text-align: center;
   }
-  footer .brand-line {
-    font-size: 1.05rem;
-    font-weight: 800;
-    color: var(--orange);
+  .strip .tag { margin: 0 auto 20px; background: var(--orange); }
+  .strip h2 {
+    font-family: var(--doc-font);
+    font-weight: 700;
+    font-size: 22pt;
+    line-height: 1.25;
+    color: #fff;
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .strip h2 em { color: var(--orange); font-style: normal; }
+  .strip p {
+    margin: 16px auto 0;
+    max-width: 620px;
+    font-size: 13.5pt;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.72);
+  }
+
+  /* ── commercial block ── */
+  .company {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 54px;
+    margin-top: 44px;
+    align-items: start;
+  }
+  @media (max-width: 780px) { .company { grid-template-columns: 1fr; gap: 34px; } }
+  .company p + p { margin-top: 16px; }
+  .who {
+    border: 1px solid var(--rule);
+    background: var(--paper);
+    padding: 30px 28px 32px;
+  }
+  .who h3 {
+    font-family: var(--doc-font);
+    font-weight: 700;
+    font-size: 11.5pt;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    letter-spacing: 0.01em;
+    color: var(--navy);
+    padding-bottom: 15px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .who ul { list-style: none; }
+  .who li {
+    font-size: 13.5pt;
+    line-height: 1.5;
+    padding: 11px 0 11px 20px;
+    border-bottom: 1px solid var(--rule);
+    position: relative;
+    color: var(--ink);
+  }
+  .who li:last-child { border-bottom: 0; padding-bottom: 0; }
+  .who li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 19px;
+    width: 8px;
+    height: 8px;
+    background: var(--orange);
+  }
+  .mail-cta {
+    display: inline-block;
+    margin-top: 28px;
+    padding: 17px 32px;
+    background: var(--navy);
+    color: #fff;
+    text-decoration: none;
+    font-size: 13pt;
+    letter-spacing: 0.05em;
+    transition: background 0.25s ease;
+  }
+  .mail-cta:hover { background: var(--orange); }
+  .mail-cta span {
+    display: block;
+    font-size: 10.5pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 5px;
+  }
+  .mail-cta:hover span { color: rgba(255,255,255,0.85); }
+
+  /* the coloured rectangle that sits above every section title */
+  .tag {
+    display: block;
+    width: 62px;
+    height: 9px;
+    margin-bottom: 22px;
+    background: var(--navy);
+  }
+  .tag.orange { background: var(--orange); }
+  .tag.center { margin-left: auto; margin-right: auto; }
+
+  h2.title {
+    font-family: var(--doc-font);
+    font-weight: 700;
+    font-size: 27pt;
+    line-height: 1.15;
+    letter-spacing: 0.005em;
+    color: var(--ink);
+    margin-bottom: 8px;
+  }
+  .kicker {
+    font-size: 11pt;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 34px;
+  }
+  .lede {
+    font-size: 16.5pt;
+    line-height: 1.62;
+    color: var(--ink);
+    max-width: 660px;
+    margin-bottom: 26px;
+  }
+  .prose { max-width: 660px; }
+  .prose p + p { margin-top: 18px; }
+  .center { text-align: center; }
+
+  /* ── services ── */
+  .svc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(232px, 1fr));
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    margin-top: 46px;
+  }
+  .svc {
+    background: var(--paper);
+    padding: 30px 26px 32px;
+    transition: background 0.3s ease;
+  }
+  .svc:hover { background: #FFFBF7; }
+  .svc .n {
+    font-family: var(--display-font);
+    font-size: 0.95rem;
+    letter-spacing: 0.08em;
+    color: var(--orange);
+    display: block;
     margin-bottom: 14px;
   }
-  footer .contact-line {
-    font-size: 0.88rem;
-    color: var(--gray);
-    margin-bottom: 4px;
+  .svc h3 {
+    font-family: var(--doc-font);
+    font-weight: 700;
+    font-size: 15.5pt;
+    color: var(--ink);
+    margin-bottom: 7px;
   }
-  footer .contact-line a { color: var(--white); text-decoration: none; font-weight: 700; }
-  footer .fine {
-    font-size: 0.72rem;
-    color: #5B6B85;
-    margin-top: 16px;
+  .svc p { font-size: 13.5pt; line-height: 1.55; color: var(--body); }
+
+  /* ── steps ── */
+  .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 44px; margin-top: 48px; }
+  .stepx .num {
+    font-family: var(--display-font);
+    font-size: 2.9rem;
+    line-height: 1;
+    color: var(--rule);
+    display: block;
+    margin-bottom: 12px;
   }
+  .stepx h3 { font-family: var(--doc-font); font-weight: 700; font-size: 15.5pt; color: var(--ink); margin-bottom: 6px; }
+  .stepx p { font-size: 13.5pt; line-height: 1.55; }
+  .stepx .bar-line { width: 34px; height: 4px; background: var(--orange); margin-bottom: 16px; }
+
+  /* ── pricing ── */
+  .rates { margin-top: 44px; border-top: 2px solid var(--navy); }
+  .rate {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 22px;
+    padding: 21px 4px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .rate .what { font-size: 15pt; color: var(--ink); font-weight: 700; }
+  .rate .what small { display: block; font-size: 12.5pt; font-weight: 400; color: var(--muted); margin-top: 3px; }
+  .rate .cost {
+    font-family: var(--display-font);
+    font-size: 1.32rem;
+    letter-spacing: 0.01em;
+    color: var(--orange);
+    white-space: nowrap;
+    text-align: right;
+  }
+  .fineprint { margin-top: 22px; font-size: 12pt; line-height: 1.55; color: var(--muted); max-width: 640px; }
+  .fineprint + .fineprint { margin-top: 14px; }
+  @media (max-width: 560px) {
+    .rate { gap: 14px; }
+    .rate .cost { font-size: 1.12rem; }
+  }
+
+  /* ── facts ── */
+  .facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 38px; margin-top: 46px; }
+  .fact h3 {
+    font-family: var(--doc-font);
+    font-weight: 700;
+    font-size: 12pt;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 9px;
+    padding-top: 15px;
+    border-top: 4px solid var(--navy);
+  }
+  .fact:nth-child(even) h3 { border-top-color: var(--orange); color: var(--orange-dk); }
+  .fact p { font-size: 13.5pt; line-height: 1.55; }
+
+  /* ── faq ── */
+  .faq { margin-top: 42px; max-width: 720px; }
+  .faq details { border-bottom: 1px solid var(--rule); }
+  .faq details:first-of-type { border-top: 1px solid var(--rule); }
+  .faq summary {
+    padding: 20px 34px 20px 0;
+    font-size: 15pt;
+    font-weight: 700;
+    color: var(--ink);
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after {
+    content: "";
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    width: 11px;
+    height: 11px;
+    border-right: 2px solid var(--orange);
+    border-bottom: 2px solid var(--orange);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform 0.25s ease;
+  }
+  .faq details[open] summary::after { transform: translateY(-25%) rotate(-135deg); }
+  .faq details p { padding: 0 0 22px; font-size: 13.5pt; line-height: 1.6; max-width: 640px; }
+
+  /* ── contact ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.14);
+    border: 1px solid rgba(255,255,255,0.14);
+    margin-top: 46px;
+  }
+  .contact-cell {
+    background: var(--navy);
+    padding: 32px 28px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  .contact-cell:hover { background: var(--navy-soft); }
+  .contact-cell .lbl {
+    font-size: 10.5pt;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--orange);
+    display: block;
+    margin-bottom: 11px;
+  }
+  .contact-cell .val { font-size: 15pt; font-weight: 700; color: #fff; display: block; line-height: 1.3; word-break: break-word; }
+  .contact-cell .sub { font-size: 12pt; color: rgba(255,255,255,0.6); display: block; margin-top: 5px; }
+
+  section.dark {
+    background: var(--navy);
+    color: rgba(255,255,255,0.78);
+  }
+  section.dark h2.title { color: #fff; }
+  section.dark .kicker { color: rgba(255,255,255,0.5); }
+  section.dark .lede { color: rgba(255,255,255,0.86); }
+  section.dark .tag { background: var(--orange); }
+
+  /* ── footer ── */
+  footer {
+    background: var(--navy);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 54px 26px 40px;
+    text-align: center;
+  }
+  footer .slogan {
+    font-family: var(--display-font);
+    font-size: clamp(1.35rem, 4.2vw, 2.05rem);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    color: #fff;
+    line-height: 1.2;
+  }
+  footer .slogan em { color: var(--orange); font-style: normal; }
+  footer .rule { width: 62px; height: 5px; background: var(--orange); margin: 26px auto; }
+  footer .lines { font-size: 12.5pt; color: rgba(255,255,255,0.62); line-height: 1.8; }
+  footer .lines a { color: #fff; text-decoration: none; }
+  footer .lines a:hover { color: var(--orange); }
+  footer .copy { margin-top: 26px; font-size: 10.5pt; color: rgba(255,255,255,0.34); letter-spacing: 0.04em; }
+
+  /* ── scroll reveal ── */
+  .rise { opacity: 0; transform: translateY(26px); transition: opacity 0.75s ease, transform 0.75s ease; }
+  .rise.in { opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .rise { opacity: 1; transform: none; transition: none; }
+    .scroll-cue .arrow { animation: none; }
+  }
+
+  @media (max-width: 640px) {
+    section.block { padding: 66px 0; }
+    h2.title { font-size: 22pt; }
+    .lede { font-size: 15pt; }
+    .hero-tagline { font-size: 13pt; }
+  }
+
+  /* ── our work gallery ── */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 44px;
+  }
+  .work-grid a { display: block; overflow: hidden; border: 1px solid var(--rule); }
+  .work-grid img {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .work-grid a:hover img { transform: scale(1.05); }
+  @media (max-width: 640px) { .work-grid { grid-template-columns: 1fr 1fr; gap: 7px; } }
+
+  /* ── flyer-match: heavy sans display weights ── */
+  .hero h1, footer .slogan { font-weight: 900; letter-spacing: -0.01em; }
+  .hero h1 .thin { font-weight: 900; }
+  .bar .mark, .svc .n, .stepx .num, .rate .cost { font-weight: 800; }
+  h2.title { font-weight: 800; letter-spacing: -0.005em; }
+  .lede { font-weight: 500; }
+  .hero-eyebrow, .kicker, .section-title, .svc .n,
+  .bar-links a, .hero-btn, .contact-cell .lbl { font-weight: 700; }
 </style>
+<script src="tracking.js" defer></script>
 </head>
 <body>
-  <div class="card">
-    <header>
-      <div class="logo-mark">🚛</div>
-      <h1>Beltway Haul Co.</h1>
-      <p class="tagline">Fast, reliable junk hauling for homes, apartments, and cleanouts.</p>
-      <p class="area">DMV · Washington DC · Maryland · Virginia &nbsp;|&nbsp; Seattle, WA</p>
-      <div class="badges">
-        <span class="badge">Multiple Man Crew</span>
-        <span class="badge">Same-Day Service</span>
-        <span class="badge">Dependable &amp; Professional</span>
-      </div>
-    </header>
 
-    <section class="actions">
-      <a class="btn btn-primary" href="sms:+12409882543?&body=Hi%20Beltway%20Haul%20Co.%2C%20I%27d%20like%20a%20free%20estimate.%20Here%27s%20a%20photo%20of%20what%20I%20need%20hauled%3A">
-        <span class="ico">📸</span>
-        <span>Text Photos for a Free Estimate<span class="sub">Fastest way to get a quote</span></span>
-      </a>
-      <a class="btn" href="tel:+12409882543">
-        <span class="ico">📞</span>
-        <span>Call 240-988-2543<span class="sub">Tap to call now</span></span>
-      </a>
-      <a class="btn" href="tel:+12029995936">
-        <span class="ico">📞</span>
-        <span>Call 202-999-5936<span class="sub">Second line</span></span>
-      </a>
-      <a class="btn" href="mailto:beltwayhaulco@gmail.com">
-        <span class="ico">✉️</span>
-        <span>Email Us<span class="sub">beltwayhaulco@gmail.com</span></span>
-      </a>
-      <a class="btn" href="beltway-haul.vcf" download>
-        <span class="ico">➕</span>
-        <span>Save My Contact<span class="sub">Adds Beltway Haul Co. to your phone</span></span>
-      </a>
-    </section>
-
-    <section>
-      <h2 class="section-title">How Booking Works</h2>
-      <div class="steps">
-        <div class="step">
-          <span class="num">1</span>
-          <p><b>Send photos</b>Text or email a few photos of what needs to go.</p>
-        </div>
-        <div class="step">
-          <span class="num">2</span>
-          <p><b>Get a free quote</b>We'll reply with a no-obligation estimate — usually same day.</p>
-        </div>
-        <div class="step">
-          <span class="num">3</span>
-          <p><b>Pick a date</b>We confirm a pickup time that works for you.</p>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <h2 class="section-title">We Handle It All</h2>
-      <div class="services-grid">
-        <div class="service-chip">Furniture Removal</div>
-        <div class="service-chip">Cleanouts</div>
-        <div class="service-chip">Junk Hauling</div>
-        <div class="service-chip">Curbside Pickup</div>
-        <div class="service-chip">Moving Debris</div>
-        <div class="service-chip">Property Cleanups</div>
-      </div>
-    </section>
-
-    <footer>
-      <p class="brand-line">We show up. We haul it. You relax.</p>
-      <p class="contact-line"><a href="tel:+12409882543">240-988-2543</a> &nbsp;·&nbsp; <a href="tel:+12029995936">202-999-5936</a></p>
-      <p class="contact-line"><a href="mailto:beltwayhaulco@gmail.com">beltwayhaulco@gmail.com</a></p>
-      <p class="fine">© 2026 Beltway Haul Co. All rights reserved.</p>
-    </footer>
+<!-- ────────────────────────── sticky bar ────────────────────────── -->
+<nav class="bar" id="bar">
+  <a class="mark" href="#top">Beltway <em>Haul Co.</em></a>
+  <div class="bar-links">
+    <a class="hide-sm" href="#services">Services</a>
+    <a class="hide-sm" href="#work">Work</a>
+    <a class="hide-sm" href="#pricing">Pricing</a>
+    <a class="hide-sm" href="#commercial">Commercial</a>
+    <a class="bar-call" href="tel:+12409882543">Call Now</a>
   </div>
+</nav>
+
+<!-- ─────────────────────────── hero video ─────────────────────────── -->
+<header class="hero" id="top">
+  <video autoplay muted loop playsinline preload="auto" aria-hidden="true">
+    <source src="hero.mp4" type="video/mp4">
+  </video>
+
+  <div class="hero-inner">
+    <p class="hero-eyebrow">Same-Day Service in the DMV</p>
+    <h1>Beltway<span class="thin">Haul Co.</span></h1>
+    <p class="hero-tagline">We show up. We haul it. You relax.</p>
+    <div class="hero-cta">
+      <a class="hero-btn solid" href="sms:+12409882543?&body=Hi%20Beltway%20Haul%20Co.%2C%20I%27d%20like%20a%20free%20estimate.%20Here%27s%20a%20photo%20of%20what%20I%20need%20hauled%3A">Text for a Free Quote</a>
+      <a class="hero-btn" href="#services">See What We Do</a>
+    </div>
+  </div>
+
+  <a class="scroll-cue" href="#services">Scroll<span class="arrow"></span></a>
+</header>
+
+<!-- ─────────────────────────── services ─────────────────────────── -->
+<section class="block" id="services">
+  <div class="wrap">
+    <span class="tag rise"></span>
+    <h2 class="title rise">What We Do</h2>
+    <p class="kicker rise">Junk removal, done properly</p>
+
+    <div class="prose rise">
+      <p class="lede">Beltway Haul Co. is a small, dependable crew that clears out the things you no longer want — furniture, appliances, construction debris, or an entire house worth of it.</p>
+      <p>You send a few photos, we send back a firm price, and we take it from there. We do the lifting, the loading, the stairs, and the sweeping up afterward. Nothing gets left behind and nothing gets added to the bill after the fact.</p>
+      <p>Usable furniture goes to donation and metal goes to recycling whenever it can. What's left is disposed of properly.</p>
+    </div>
+
+    <div class="svc-grid rise">
+      <div class="svc">
+        <span class="n">01</span>
+        <h3>Furniture Removal</h3>
+        <p>Couches, mattresses, dressers, desks, and anything else too heavy for one person and a sedan.</p>
+      </div>
+      <div class="svc">
+        <span class="n">02</span>
+        <h3>Full Cleanouts</h3>
+        <p>Apartments, basements, garages, storage units, and estate cleanouts handled start to finish.</p>
+      </div>
+      <div class="svc">
+        <span class="n">03</span>
+        <h3>Appliance Hauling</h3>
+        <p>Refrigerators, washers, dryers, and water heaters disconnected where needed and carried out.</p>
+      </div>
+      <div class="svc">
+        <span class="n">04</span>
+        <h3>Construction Debris</h3>
+        <p>Drywall, lumber, flooring, and renovation leftovers cleared so the next trade can get to work.</p>
+      </div>
+      <div class="svc">
+        <span class="n">05</span>
+        <h3>Curbside Pickup</h3>
+        <p>Already have it at the curb? We'll grab it — you don't even need to be home.</p>
+      </div>
+      <div class="svc">
+        <span class="n">06</span>
+        <h3>Property Cleanups</h3>
+        <p>Yard waste, tenant turnovers, and general clearing for landlords and property managers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────────── our work ──────────────────────────── -->
+<section class="block" id="work">
+  <div class="wrap">
+    <span class="tag rise"></span>
+    <h2 class="title rise">Our Work</h2>
+    <p class="kicker rise">Real jobs, cleared out</p>
+    <p class="lede rise">From packed garages to full trailer loads — here's a look at what we actually haul. Yours could be the next one gone.</p>
+
+    <div class="work-grid rise">
+      <a href="work-1.jpg" target="_blank" rel="noopener"><img src="work-1.jpg" alt="Loaded dumpster on a residential street after a cleanout" loading="lazy"></a>
+      <a href="work-2.jpg" target="_blank" rel="noopener"><img src="work-2.jpg" alt="Packed garage before a Beltway Haul Co. cleanout" loading="lazy"></a>
+      <a href="work-3.jpg" target="_blank" rel="noopener"><img src="work-3.jpg" alt="Trailer loaded with hauled furniture and debris" loading="lazy"></a>
+      <a href="work-4.jpg" target="_blank" rel="noopener"><img src="work-4.jpg" alt="Full dumpster of bagged junk removed from a property" loading="lazy"></a>
+      <a href="work-5.jpg" target="_blank" rel="noopener"><img src="work-5.jpg" alt="Garage cleanout in progress with debris being cleared" loading="lazy"></a>
+      <a href="work-6.jpg" target="_blank" rel="noopener"><img src="work-6.jpg" alt="Construction debris and wood cleared to the curb" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────── how it works ──────────────────────── -->
+<section class="block tint" id="how">
+  <div class="wrap">
+    <span class="tag orange rise"></span>
+    <h2 class="title rise">How It Works</h2>
+    <p class="kicker rise">Three steps, usually one day</p>
+
+    <div class="steps">
+      <div class="stepx rise">
+        <span class="num">01</span>
+        <div class="bar-line"></div>
+        <h3>Send photos</h3>
+        <p>Text or email a few pictures of what needs to go. A rough idea of the pile is enough.</p>
+      </div>
+      <div class="stepx rise">
+        <span class="num">02</span>
+        <div class="bar-line"></div>
+        <h3>Get a free estimate</h3>
+        <p>We reply with a no-obligation price, usually the same day — and for anything sizeable we send an estimator out to you, free of charge.</p>
+      </div>
+      <div class="stepx rise">
+        <span class="num">03</span>
+        <div class="bar-line"></div>
+        <h3>We haul it away</h3>
+        <p>We confirm a time that works, show up, load it up, and leave the space clean.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─────────────────── free estimate strip ─────────────────── -->
+<section class="strip">
+  <span class="tag rise"></span>
+  <h2 class="rise">We send an estimator to <em>every single job</em> — free, with no obligation.</h2>
+  <p class="rise">Photos are enough for most pickups, but when it helps we come out, walk the space with you, and hand you a firm price on the spot. You are never charged for the visit and you are never pressured to book.</p>
+</section>
+
+<!-- ─────────────────────────── pricing ─────────────────────────── -->
+<section class="block" id="pricing">
+  <div class="wrap">
+    <span class="tag rise"></span>
+    <h2 class="title rise">What It Costs</h2>
+    <p class="kicker rise">Straightforward, by volume</p>
+
+    <div class="rates rise">
+      <div class="rate">
+        <span class="what">Single Item<small>One couch, mattress, or appliance</small></span>
+        <span class="cost">$95 – $175</span>
+      </div>
+      <div class="rate">
+        <span class="what">Quarter Load<small>A few pieces of furniture</small></span>
+        <span class="cost">$200 – $350</span>
+      </div>
+      <div class="rate">
+        <span class="what">Half Load<small>A small room, or a garage corner</small></span>
+        <span class="cost">$375 – $600</span>
+      </div>
+      <div class="rate">
+        <span class="what">Full Load<small>A packed truck — garage, basement, or storage unit</small></span>
+        <span class="cost">$650 – $900</span>
+      </div>
+      <div class="rate">
+        <span class="what">Full Apartment<small>A complete one or two bedroom cleanout</small></span>
+        <span class="cost">$900 – $1,200</span>
+      </div>
+      <div class="rate">
+        <span class="what">Whole House &amp; Estate<small>Multi-room or multi-trip clearing</small></span>
+        <span class="cost">Quoted on site</span>
+      </div>
+    </div>
+
+    <p class="fineprint rise">These are honest ranges, not teaser rates. Where you land inside a range depends on the volume, the weight, and how far we have to carry it — stairs, elevators, and long walks all add time. Hazardous items and heavy debris such as concrete or tile carry additional disposal fees.</p>
+    <p class="fineprint rise"><strong style="color:var(--ink);">You always get one exact number in writing before we lift anything</strong>, and that number is what you pay. If we open the door and find noticeably more than the photos showed, we tell you the new price first and you decide — we never load the truck and hand you a bigger bill afterward.</p>
+  </div>
+</section>
+
+<!-- ──────────────────── commercial / large jobs ──────────────────── -->
+<section class="block tint" id="commercial">
+  <div class="wrap">
+    <span class="tag orange rise"></span>
+    <h2 class="title rise">Commercial &amp; Large-Scale Work</h2>
+    <p class="kicker rise">For jobs bigger than a truckload</p>
+
+    <div class="company">
+      <div class="prose rise">
+        <p class="lede">Some jobs are too big to price from a photo. When you are clearing a whole building, turning over units, or hauling away weeks of construction debris, we handle it as a proper project rather than a pickup.</p>
+        <p>That means a walkthrough with one of our estimators, a written scope, and a single quoted price for the whole job — not a per-trip guess. We can work around your tenants, your trades, or your business hours, and we can spread a large clearing across several days if that is easier for you.</p>
+        <p>We also work on standing arrangements for property managers and contractors who need regular pickups rather than a one-off.</p>
+        <a class="mail-cta" href="mailto:beltwayhaulco@gmail.com?subject=Commercial%20%2F%20Large%20Job%20Inquiry&amp;body=Hi%20Beltway%20Haul%20Co.%2C%0A%0AI%27d%20like%20to%20discuss%20a%20larger%20job.%0A%0AProperty%20type%3A%0ALocation%3A%0AApproximate%20scope%3A%0APreferred%20timing%3A%0A%0AThank%20you%2C">
+          <span>Email us for details</span>
+          beltwayhaulco@gmail.com
+        </a>
+      </div>
+
+      <div class="who rise">
+        <h3>Who This Is For</h3>
+        <ul>
+          <li>Property managers &amp; landlords</li>
+          <li>Apartment &amp; unit turnovers</li>
+          <li>Office and retail cleanouts</li>
+          <li>General contractors &amp; renovations</li>
+          <li>Estate and foreclosure clearing</li>
+          <li>Ongoing or scheduled pickups</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────────── good to know ────────────────────────── -->
+<section class="block" id="details">
+  <div class="wrap">
+    <span class="tag orange rise"></span>
+    <h2 class="title rise">Good To Know</h2>
+    <p class="kicker rise">The details people ask about</p>
+
+    <div class="facts">
+      <div class="fact rise">
+        <h3>Hours</h3>
+        <p>Open 7:00&nbsp;AM to 7:00&nbsp;PM, Saturday through Thursday. Closed Fridays. Same-day and next-day slots are usually available.</p>
+      </div>
+      <div class="fact rise">
+        <h3>Where We Work</h3>
+        <p>Washington DC, Montgomery and Prince George's County MD, Arlington, Alexandria, and Fairfax VA.</p>
+      </div>
+      <div class="fact rise">
+        <h3>Payment</h3>
+        <p>Cash, Zelle, Cash App, Venmo, and all major cards. You pay after the job is finished, not before.</p>
+      </div>
+      <div class="fact rise">
+        <h3>Disposal</h3>
+        <p>Usable furniture is donated and metal is recycled wherever possible. We don't simply dump everything.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ──────────────────────────── faq ──────────────────────────── -->
+<section class="block tint" id="faq">
+  <div class="wrap">
+    <span class="tag rise"></span>
+    <h2 class="title rise">Common Questions</h2>
+    <p class="kicker rise">Answered before you ask</p>
+
+    <div class="faq rise">
+      <details>
+        <summary>Do I need to be there for the pickup?</summary>
+        <p>No. As long as the items are accessible and you have approved the quote, we can handle it and send you photos when we are done.</p>
+      </details>
+      <details>
+        <summary>Do you carry things down stairs?</summary>
+        <p>Yes. Stairs, basements, attics, and tight apartment hallways are all normal for us — just mention it when you send photos so the quote is accurate.</p>
+      </details>
+      <details>
+        <summary>What won't you take?</summary>
+        <p>We cannot haul hazardous material: paint, chemicals, fuel, asbestos, or medical waste. Nearly everything else is fair game, so it never hurts to ask.</p>
+      </details>
+      <details>
+        <summary>How fast can you get here?</summary>
+        <p>Often the same day. Text photos in the morning and there is a good chance it is gone by that evening.</p>
+      </details>
+      <details>
+        <summary>Do you charge for the estimate?</summary>
+        <p>Never. We send an estimator to every job at no cost and with no obligation — you can take the price, think it over, or walk away, and you owe us nothing either way.</p>
+      </details>
+      <details>
+        <summary>Do you handle commercial and large-scale jobs?</summary>
+        <p>Yes. Property managers, contractors, offices, and multi-unit turnovers are a regular part of what we do. Email <a href="mailto:beltwayhaulco@gmail.com" style="color:var(--orange-dk);">beltwayhaulco@gmail.com</a> and we will arrange a walkthrough and a written scope.</p>
+      </details>
+      <details>
+        <summary>Is the quote really the final price?</summary>
+        <p>Yes. The written quote is what you pay, as long as what we find matches the photos. If you add items on the day, we will price them on the spot before loading.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ────────────────────────── contact ────────────────────────── -->
+<section class="block dark" id="contact">
+  <div class="wrap center">
+    <span class="tag orange center rise"></span>
+    <h2 class="title rise">Get In Touch</h2>
+    <p class="kicker rise">Free estimates, no obligation</p>
+    <p class="lede rise" style="margin-left:auto;margin-right:auto;">The fastest way to a price is a photo. Text us what needs to go and we will get right back to you.</p>
+
+    <div class="contact-grid rise" style="text-align:left;">
+      <a class="contact-cell" href="sms:+12409882543?&body=Hi%20Beltway%20Haul%20Co.%2C%20I%27d%20like%20a%20free%20estimate.%20Here%27s%20a%20photo%20of%20what%20I%20need%20hauled%3A">
+        <span class="lbl">Text Photos</span>
+        <span class="val">240-988-2543</span>
+        <span class="sub">Fastest way to get a quote</span>
+      </a>
+      <a class="contact-cell" href="tel:+12409882543">
+        <span class="lbl">Call — Main</span>
+        <span class="val">240-988-2543</span>
+        <span class="sub">Tap to call now</span>
+      </a>
+      <a class="contact-cell" href="tel:+12029995936">
+        <span class="lbl">Call — Second Line</span>
+        <span class="val">202-999-5936</span>
+        <span class="sub">If the main line is busy</span>
+      </a>
+      <a class="contact-cell" href="mailto:beltwayhaulco@gmail.com">
+        <span class="lbl">Email</span>
+        <span class="val">beltwayhaulco@gmail.com</span>
+        <span class="sub">Attach photos and details</span>
+      </a>
+      <a class="contact-cell" href="beltway-haul.vcf" download>
+        <span class="lbl">Save Our Contact</span>
+        <span class="val">Add to Contacts</span>
+        <span class="sub">Keeps us one tap away</span>
+      </a>
+      <div class="contact-cell" style="cursor:default;">
+        <span class="lbl">Hours</span>
+        <span class="val">7AM–7PM · Closed Fri</span>
+        <span class="sub">Same-day service available</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="slogan">We show up. <em>We haul it.</em> You relax.</p>
+  <div class="rule"></div>
+  <p class="lines">
+    <a href="tel:+12409882543">240-988-2543</a> &nbsp;·&nbsp; <a href="tel:+12029995936">202-999-5936</a><br>
+    <a href="mailto:beltwayhaulco@gmail.com">beltwayhaulco@gmail.com</a><br>
+    Washington DC · Maryland · Virginia<br>
+    <a href="card.html">Save our digital card</a>
+  </p>
+  <p class="copy">© 2026 Beltway Haul Co. All rights reserved.</p>
+</footer>
+
+<script>
+  /* sticky bar appears once the hero is behind you */
+  var bar = document.getElementById('bar');
+  var hero = document.getElementById('top');
+  new IntersectionObserver(function (entries) {
+    bar.classList.toggle('show', !entries[0].isIntersecting);
+  }, { rootMargin: '-88% 0px 0px 0px' }).observe(hero);
+
+  /* reveal-on-scroll */
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.rise').forEach(function (el, i) {
+    el.style.transitionDelay = (Math.min(i % 6, 4) * 60) + 'ms';
+    io.observe(el);
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MovingCompany",
+  "name": "Beltway Haul Co.",
+  "description": "Fast, reliable junk hauling for homes, apartments, and cleanouts across the DMV, Maryland, Virginia, and Washington DC.",
+  "slogan": "We show up. We haul it. You relax.",
+  "image": [
+    "https://beltwayhaulco.com/work-1.jpg",
+    "https://beltwayhaulco.com/work-3.jpg",
+    "https://beltwayhaulco.com/og-image.png"
+  ],
+  "telephone": ["+1-240-988-2543", "+1-202-999-5936"],
+  "email": "beltwayhaulco@gmail.com",
+  "priceRange": "$95-$1200",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Saturday","Sunday","Monday","Tuesday","Wednesday","Thursday"],
+    "opens": "07:00",
+    "closes": "19:00"
+  }],
+  "areaServed": [
+    { "@type": "City", "name": "Washington", "addressRegion": "DC" },
+    { "@type": "AdministrativeArea", "name": "Montgomery County", "addressRegion": "MD" },
+    { "@type": "AdministrativeArea", "name": "Prince George's County", "addressRegion": "MD" },
+    { "@type": "City", "name": "Arlington", "addressRegion": "VA" },
+    { "@type": "City", "name": "Alexandria", "addressRegion": "VA" },
+    { "@type": "City", "name": "Fairfax", "addressRegion": "VA" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Hauling Services",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Furniture Removal" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full Cleanouts" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Appliance Hauling" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Construction Debris Removal" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Curbside Pickup" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Property Cleanups" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Commercial & Large-Scale Cleanouts" } }
+    ]
+  },
+  "makesOffer": {
+    "@type": "Offer",
+    "name": "Free On-Site Estimate",
+    "description": "We send an estimator to every job free of charge, with no obligation.",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need to be there for the pickup?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. As long as the items are accessible and you have approved the quote, we can handle it and send you photos when we are done." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you carry things down stairs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Stairs, basements, attics, and tight apartment hallways are all normal for us — just mention it when you send photos so the quote is accurate." }
+    },
+    {
+      "@type": "Question",
+      "name": "What won't you take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "We cannot haul hazardous material: paint, chemicals, fuel, asbestos, or medical waste. Nearly everything else is fair game." }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast can you get here?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Often the same day. Text photos in the morning and there is a good chance it is gone by that evening." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you charge for the estimate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Never. We send an estimator to every job at no cost and with no obligation." }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you handle commercial and large-scale jobs?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Property managers, contractors, offices, and multi-unit turnovers are a regular part of what we do. Email beltwayhaulco@gmail.com and we will arrange a walkthrough and a written scope." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the quote really the final price?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The written quote is what you pay, as long as what we find matches the photos." }
+    }
+  ]
+}
+</script>
 </body>
 </html>

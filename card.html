@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beltway Haul Co. — Digital Card</title>
+<meta name="description" content="Beltway Haul Co. — junk removal and hauling across the DMV. Save our contact, call, or text photos for a free estimate.">
+<meta name="theme-color" content="#0E1826">
+<link rel="canonical" href="https://beltwayhaulco.com/card.html">
+<meta property="og:url" content="https://beltwayhaulco.com/card.html">
+<meta property="og:image" content="https://beltwayhaulco.com/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Beltway Haul Co.">
+<meta property="og:description" content="Junk removal & hauling. Free estimate on every job.">
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0E1826;
+    --navy-soft: #1B2C45;
+    --orange: #F4791C;
+    --ink: #14202F;
+    --muted: #7A8697;
+    --rule: #E3E7EC;
+    --doc-font: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    --display-font: 'Montserrat', sans-serif;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: #fff;
+    color: #3C4757;
+    font-family: var(--doc-font);
+    font-size: 12.5pt;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    display: flex;
+    justify-content: center;
+    padding: 0 0 48px;
+  }
+  .sheet { width: 100%; max-width: 460px; }
+
+  /* header */
+  .head {
+    background: var(--navy);
+    color: #fff;
+    padding: 48px 30px 40px;
+    text-align: center;
+    position: relative;
+  }
+  .head::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 7px;
+    background: var(--orange);
+  }
+  .head .eyebrow {
+    font-size: 10.5pt;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.62);
+    margin-bottom: 18px;
+  }
+  .head h1 {
+    font-family: var(--display-font);
+    font-weight: 900;
+    font-size: clamp(2.3rem, 12vw, 3.1rem);
+    line-height: 0.96;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+  .head h1 span { display: block; color: var(--orange); font-size: 0.52em; letter-spacing: 0.14em; margin-top: 0.34em; }
+  .head .role { margin-top: 20px; font-size: 13pt; color: rgba(255,255,255,0.82); }
+  .head .area { margin-top: 6px; font-size: 11.5pt; color: rgba(255,255,255,0.52); }
+
+  /* free estimate flag */
+  .flag {
+    background: #FFF6EE;
+    border-bottom: 1px solid var(--rule);
+    padding: 18px 24px;
+    text-align: center;
+    font-size: 13pt;
+    color: var(--ink);
+  }
+  .flag b { color: #D9600C; }
+
+  /* actions */
+  .acts { padding: 26px 24px 8px; display: flex; flex-direction: column; gap: 10px; }
+  .act {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 18px;
+    border: 1px solid var(--rule);
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .act:hover, .act:active { border-color: var(--orange); background: #FFFBF7; }
+  .act .blk { width: 8px; align-self: stretch; background: var(--navy); flex-shrink: 0; }
+  .act .txt { flex: 1; }
+  .act .lbl {
+    display: block;
+    font-size: 10pt;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 3px;
+  }
+  .act .val { font-size: 14.5pt; font-weight: 700; color: var(--ink); }
+  .act.primary { background: var(--navy); border-color: var(--navy); color: #fff; }
+  .act.primary:hover, .act.primary:active { background: var(--navy-soft); border-color: var(--navy-soft); }
+  .act.primary .blk { background: var(--orange); }
+  .act.primary .lbl { color: var(--orange); }
+  .act.primary .val { color: #fff; }
+  .act.save { background: var(--orange); border-color: var(--orange); }
+  .act.save .blk { background: rgba(0,0,0,0.25); }
+  .act.save .lbl { color: rgba(255,255,255,0.85); }
+  .act.save .val { color: #fff; }
+  .act.save:hover, .act.save:active { background: #D9600C; border-color: #D9600C; }
+
+  /* qr */
+  .qr-wrap { padding: 34px 24px 10px; text-align: center; }
+  .qr-wrap .blk { width: 54px; height: 8px; background: var(--orange); margin: 0 auto 18px; }
+  .qr-wrap h2 {
+    font-family: var(--doc-font);
+    font-weight: 700;
+    font-size: 15pt;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .qr-wrap p { font-size: 12pt; color: var(--muted); margin-bottom: 20px; }
+  .qr-wrap img {
+    width: 210px;
+    height: 210px;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid var(--rule);
+    padding: 12px;
+    background: #fff;
+  }
+
+  /* footer */
+  .foot { padding: 34px 24px 0; text-align: center; }
+  .foot .rule { width: 54px; height: 5px; background: var(--navy); margin: 0 auto 20px; }
+  .foot .slog {
+    font-family: var(--display-font);
+    font-weight: 900;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    color: var(--ink);
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+  }
+  .foot .slog em { color: var(--orange); font-style: normal; }
+  .foot .site { margin-top: 18px; font-size: 12.5pt; }
+  .foot .site a { color: var(--ink); }
+  .foot .fine { margin-top: 22px; font-size: 10.5pt; color: var(--muted); letter-spacing: 0.04em; }
+</style>
+<script src="tracking.js" defer></script>
+</head>
+<body>
+<div class="sheet">
+
+  <div class="head">
+    <p class="eyebrow">Digital Card</p>
+    <h1>Beltway<span>Haul Co.</span></h1>
+    <p class="role">Junk Removal &amp; Hauling</p>
+    <p class="area">Washington DC · Maryland · Virginia</p>
+  </div>
+
+  <p class="flag">A <b>free on-site estimate</b> on every job — no obligation.</p>
+
+  <div class="acts">
+    <a class="act save" href="beltway-haul.vcf" download>
+      <span class="blk"></span>
+      <span class="txt"><span class="lbl">Add to your phone</span><span class="val">Save Our Contact</span></span>
+    </a>
+
+    <a class="act primary" href="sms:+12409882543?&body=Hi%20Beltway%20Haul%20Co.%2C%20I%27d%20like%20a%20free%20estimate.%20Here%27s%20a%20photo%20of%20what%20I%20need%20hauled%3A">
+      <span class="blk"></span>
+      <span class="txt"><span class="lbl">Fastest way to a price</span><span class="val">Text Photos for a Quote</span></span>
+    </a>
+
+    <a class="act" href="tel:+12409882543">
+      <span class="blk"></span>
+      <span class="txt"><span class="lbl">Call — main line</span><span class="val">240-988-2543</span></span>
+    </a>
+
+    <a class="act" href="tel:+12029995936">
+      <span class="blk"></span>
+      <span class="txt"><span class="lbl">Call — second line</span><span class="val">202-999-5936</span></span>
+    </a>
+
+    <a class="act" href="mailto:beltwayhaulco@gmail.com">
+      <span class="blk"></span>
+      <span class="txt"><span class="lbl">Email — larger &amp; commercial jobs</span><span class="val">beltwayhaulco@gmail.com</span></span>
+    </a>
+
+    <a class="act" href="index.html">
+      <span class="blk"></span>
+      <span class="txt"><span class="lbl">Pricing, services &amp; FAQ</span><span class="val">Visit Our Website</span></span>
+    </a>
+  </div>
+
+  <div class="qr-wrap">
+    <div class="blk"></div>
+    <h2>Pass It Along</h2>
+    <p>Have them point a camera here</p>
+    <img src="qr-code.png" alt="QR code linking to the Beltway Haul Co. website">
+  </div>
+
+  <div class="foot">
+    <div class="rule"></div>
+    <p class="slog">We show up. <em>We haul it.</em> You relax.</p>
+    <p class="site"><a href="index.html">beltwayhaulco.com</a></p>
+    <p class="fine">© 2026 Beltway Haul Co.</p>
+  </div>
+
+</div>
+</body>
+</html>
